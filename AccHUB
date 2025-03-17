@@ -20,6 +20,12 @@ local Tab2 = Window:MakeTab({
 	PremiumOnly = false
 })
 
+local Tab3 = Window:MakeTab({
+	Name = "Misc",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
 Tab1:AddToggle({
 	Name = "Auto Tower INF",
 	Default = false,
@@ -84,6 +90,16 @@ Tab2:AddToggle({
                             checkPotions("potion_rainbow")
             end
         end
+		print(Value)
+	end    
+})
+
+
+Tab3:AddToggle({
+	Name = "Auto Rejoin",
+	Default = false,
+	Callback = function(Value)
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/jayzekituze/rblx/refs/heads/main/UtoRejoin"))()
 		print(Value)
 	end    
 })
