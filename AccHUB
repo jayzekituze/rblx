@@ -1,1 +1,94 @@
-WIP
+local osclock = os.clock()
+repeat task.wait(1) until game:IsLoaded()
+print("ACC_HUB")
+
+
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/jensonhirst/Orion/main/source')))()
+--loadstring(game:HttpGet('https://raw.githubusercontent.com/jayzekituze/Utomel/refs/heads/main/AllforOne'))()
+
+local Window = OrionLib:MakeWindow({Name = "Acc HUB", HidePremium = false, SaveConfig = true, ConfigFolder = "AccHub"})
+
+local Tab1 = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Tab2 = Window:MakeTab({
+	Name = "Potion",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab1:AddToggle({
+	Name = "Auto Tower INF",
+	Default = false,
+	Callback = function(Value)
+        task.spawn(function()
+            wait(5)
+            local function teleportPlayer()
+                local player = game.Players.LocalPlayer
+                local character = player.Character or player.CharacterAdded:Wait()
+                local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+        
+                local targetPosition = Vector3.new(439.45, 12.98, -454.59)
+                humanoidRootPart.CFrame = CFrame.new(targetPosition)
+            end
+            teleportPlayer()
+        end)
+        
+        task.spawn(function()
+            wait(5)
+            game:GetService("ReplicatedStorage"):FindFirstChild("0k5"):FindFirstChild("ad5ee225-6a2f-4c5b-9e1e-1d4d3c581868"):FireServer()
+        end)
+		print(Value)
+	end    
+})
+
+Tab2:AddToggle({
+	Name = "Auto Collect Potions",
+	Default = false,
+	Callback = function(Value)
+        getgenv().collectPotions = true
+        --loadstring(game:HttpGet('https://raw.githubusercontent.com/jayzekituze/Utomel/refs/heads/main/AccPots.lua'))()
+        while task.wait(0.10) do
+            if getgenv().collectPotions == true then
+                local foundPotion = false  -- Flag to check if a potion was found
+
+                -- Function to check for potions in a specific folder
+                local function checkPotions(folderName)
+                    local folder = game:GetService('Workspace')['Folder']:FindFirstChild(folderName)
+                    if folder then  -- Check if the folder exists
+                        for _, potion in pairs(folder:GetChildren()) do
+                            if potion:IsA("Part") then
+                                -- Teleport the player to the potion's position
+                                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = potion.CFrame
+
+                                -- Make the player jump
+                                local humanoid = game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
+                                if humanoid then
+                                    humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+                                end
+
+                                return true  -- Return true if a potion was found
+                            end
+                        end
+                    end
+                    return false  -- Return false if no potions were found or folder doesn't exist
+                end
+
+                -- Check for each type of potion in order
+                foundPotion = checkPotions("potion_red") or
+                            checkPotions("potion_green") or
+                            checkPotions("potion_blue") or
+                            checkPotions("potion_rainbow")
+            end
+        end
+		print(Value)
+	end    
+})
+
+
+OrionLib:Init()
+
+
