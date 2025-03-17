@@ -108,4 +108,5 @@ Tab3:AddToggle({
 OrionLib:Init()
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/jayzekituze/rblx/refs/heads/main/UtoRejoin"))()
-
+wait(5)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/evxncodes/mainroblox/main/anti-afk", true))()
