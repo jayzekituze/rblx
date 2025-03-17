@@ -107,4 +107,5 @@ Tab3:AddToggle({
 
 OrionLib:Init()
 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/jayzekituze/rblx/refs/heads/main/UtoRejoin"))()
 
