@@ -1,0 +1,22 @@
+local osclock = os.clock()
+repeat task.wait(1) until game:IsLoaded()
+print("ACC_SHITHUB")
+
+wait(20)
+getgenv().config = {
+    AutoINF = false, -- set to "true" to work, set to "false" to stop it or not use
+    TowerCD = 10, -- cooldown to do tower again
+    AutoPotions = false, -- set to "true" to work, set to "false" to stop it or not use
+    AutoRaid = true, -- set to "true" to work, set to "false" to stop it or not use
+    RaidCD = 9,    -- make sure you do your raid first and how long your battle was and add 2-3 seconds on it
+    AntiAFK = true, -- set to "true" to work, set to "false" to stop it or not use
+    AutoRejoin = true -- set to "true" to work, set to "false" to stop it or not use
+}
+
+-- you can only do auto inf and potions at the same time else might get bugged
+
+if game.PlaceId == 110829983956014 then
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/jayzekituze/rblx/refs/heads/main/AccHUB'))()
+else
+    print("NOT ACC SHITHEAD")
+end
