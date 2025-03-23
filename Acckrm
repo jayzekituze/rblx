@@ -4,10 +4,10 @@ print("ACC_SHITHUB")
 
 wait(20)
 getgenv().config = {
-    AutoINF = true, -- set to "true" to work, set to "false" to stop it or not use
+    AutoINF = false, -- set to "true" to work, set to "false" to stop it or not use
     TowerCD = 15, -- cooldown to do tower again
     AutoPotions = false, -- set to "true" to work, set to "false" to stop it or not use
-    AutoRaid = false, -- set to "true" to work, set to "false" to stop it or not use
+    AutoRaid = true, -- set to "true" to work, set to "false" to stop it or not use
     RaidCD = 9,    -- make sure you do your raid first and how long your battle was and add 2-3 seconds on it
     AntiAFK = true, -- set to "true" to work, set to "false" to stop it or not use
     AutoRejoin = true -- set to "true" to work, set to "false" to stop it or not use
