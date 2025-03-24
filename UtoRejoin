@@ -1,44 +1,21 @@
---game.Players.localPlayer:kick() --remove "--" to kick urself for testing purposes.
- 
---Put this script into your auto execute folder, highly recommended (use it)
+--[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+local GuiService = game:GetService("GuiService")
+local Players = game:GetService("Players")
+local TeleportService = game:GetService("TeleportService")
 
---I did not make this, Someone named lugitek did.
+local player = Players.LocalPlayer
 
-game:GetService("StarterGui"):SetCore("SendNotification",{
- Title = "Executed";
- Text = "Made by lugitek";
- Duration = 5;
- Icon = "";
-})
+local function onErrorMessageChanged(errorMessage)
+    if errorMessage and errorMessage ~= "" then
+        print("Error detected: " .. errorMessage)
 
-gui = game.CoreGui.RobloxPromptGui.promptOverlay:WaitForChild("ErrorPrompt")
-
-gui.Size = UDim2.new(0, 400, 0, 230)
-
-leave = gui.MessageArea.ErrorFrame.ButtonArea.LeaveButton
-
-gui.MessageArea.MessageAreaPadding.PaddingTop = UDim.new(0,-20)
-gui.MessageArea.ErrorFrame.ErrorFrameLayout.Padding = UDim.new(0, 5)
-
-gui.MessageArea.ErrorFrame.ButtonArea.ButtonLayout.CellPadding = UDim2.new(0, 0, 0, 5)
-
-if not leave.Parent:FindFirstChild"Rejoin" then
-rejoin = leave:Clone()
-rejoin.Parent = leave.Parent
-rejoin.Name="Rejoin"
-rejoin.ButtonText.Text = "Rejoin"
+        if player then
+            wait()
+            TeleportService:Teleport(game.PlaceId, player)
+        end
+    end
 end
 
-Players = game:GetService("Players")
-TeleportService = game:GetService("TeleportService")
-
-rejoin.MouseButton1Click:Connect(function()
- if #Players:GetPlayers() <= 1 then
-game.Players.localPlayer:kick("Rejoining...")
-rejoin: destroy ()
-task.wait(1)
-  TeleportService:Teleport(game.PlaceId, Players.LocalPlayer)
- else
-  TeleportService:TeleportToPlaceInstance(game.PlaceId, game.JobId, Players.LocalPlayer)
- end
-end)
+GuiService.ErrorMessageChanged:Connect(onErrorMessageChanged)
