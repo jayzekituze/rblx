@@ -47,7 +47,7 @@ task.spawn(function()
     while task.wait(0.1) do
         if getgenv().AutoRaids == true then
             -- Check if the "battle-end" GUI is present
-            if game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("battle-end") then
+            if game:GetService("Players").LocalPlayer.PlayerGui.HideBattleButton then
                 local raid = game.Workspace:FindFirstChild("raid")
                 local eternalDragon = raid and raid:FindFirstChild("eternal_dragon")
                 local blueEyes = eternalDragon and eternalDragon:FindFirstChild("Blue Eyes White Dragon")
@@ -63,7 +63,30 @@ task.spawn(function()
     end
 end)
 
+task.spawn(function()
+    while task.wait(0.1) do
+        if getgenv().AutoRaids == true then
+            -- Check if the "battle-end" GUI is NOT present
+            if not game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("HideBattleButton") then
+                local raid = game.Workspace:FindFirstChild("raid")
+                local eternalDragon = raid and raid:FindFirstChild("eternal_dragon")
+                local blueEyes = eternalDragon and eternalDragon:FindFirstChild("Blue Eyes White Dragon")
+                local prox = blueEyes and blueEyes:FindFirstChild("ProximityPrompt")
+
+                if prox then
+                    fireproximityprompt(prox)
+					print("raidstarted")
+                else
+                    print("Proximity Prompt not found!")
+                end
+            end
+        end
+    end
+end)
+
 
 task.spawn(function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/jayzekituze/rblx/refs/heads/main/AnTIAFK'))()
 end)
+
+
