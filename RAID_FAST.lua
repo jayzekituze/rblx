@@ -62,3 +62,8 @@ task.spawn(function()
         end
     end
 end)
+
+
+task.spawn(function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/jayzekituze/rblx/refs/heads/main/AnTIAFK'))()
+end)
