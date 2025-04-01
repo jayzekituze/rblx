@@ -1,0 +1,119 @@
+local osclock = os.clock()
+repeat task.wait(1) until game:IsLoaded()
+print("AccRaid_BETA")
+
+-- انتظر حتى يتم تحميل اللعبة بالكامل
+task.wait(5)
+
+-- تكوين المتغيرات
+if not getgenv().AutoRaids then
+    getgenv().AutoRaids = true -- لإيقاف الغارات استخدم "false" ولبدئها مرة أخرى استخدم "true"
+end
+local raidDoneCD = 53 -- أضف دائمًا 3-5 ثوانٍ من وقت انتهاء الغارة الأولى
+
+-- وظيفة نقل اللاعب مع معالجة الأخطاء
+local function teleportPlayer(position)
+    local success, error = pcall(function()
+        local player = game.Players.LocalPlayer
+        if not player then
+            warn("Player not found")
+            return
+        end
+        
+        local character = player.Character or player.CharacterAdded:Wait()
+        local humanoidRootPart = character:WaitForChild("HumanoidRootPart", 5)
+        
+        if not humanoidRootPart then
+            warn("HumanoidRootPart not found")
+            return
+        end
+        
+        humanoidRootPart.CFrame = CFrame.new(position)
+        print("Teleported to position: " .. tostring(position))
+    end)
+    
+    if not success then
+        warn("Error in teleportPlayer: " .. tostring(error))
+    end
+end
+
+-- النقل الأولي إلى موقع الغارة
+task.spawn(function()
+    local success, error = pcall(function()
+        task.wait(5) -- انتظر قبل البدء
+        local raidPosition = Vector3.new(-5285.70751953125, 161.93984985351562, -500.4004821777344)
+        teleportPlayer(raidPosition)
+        print("Teleported to raid location")
+    end)
+    
+    if not success then
+        warn("Error in initial teleport: " .. tostring(error))
+    end
+end)
+
+-- حلقة الغارة الرئيسية مع معالجة الأخطاء المحسنة
+task.spawn(function()
+    while true do
+        if getgenv().AutoRaids then
+            local success, error = pcall(function()
+                -- البحث عن عناصر الغارة مع التحقق المناسب من الأخطاء
+                local raid = game.Workspace:FindFirstChild("raid")
+                if not raid then
+                    print("Raid not found in workspace, waiting...")
+                    task.wait(5)
+                    return
+                end
+                
+                local eternalDragon = raid:FindFirstChild("eternal_dragon")
+                if not eternalDragon then
+                    print("Eternal dragon not found in raid, waiting...")
+                    task.wait(5)
+                    return
+                end
+                
+                local blueEyes = eternalDragon:FindFirstChild("Blue Eyes White Dragon")
+                if not blueEyes then
+                    print("Blue Eyes White Dragon not found, waiting...")
+                    task.wait(5)
+                    return
+                end
+                
+                local prox = blueEyes:FindFirstChild("ProximityPrompt")
+                if not prox then
+                    print("Proximity Prompt not found, waiting...")
+                    task.wait(5)
+                    return
+                end
+                
+                -- التأكد من أن اللاعب قريب بما فيه الكفاية من الزر
+                local character = game.Players.LocalPlayer.Character
+                if character and character:FindFirstChild("HumanoidRootPart") then
+                    local distance = (character.HumanoidRootPart.Position - blueEyes.Position).Magnitude
+                    
+                    if distance > 10 then
+                        print("Moving closer to Blue Eyes White Dragon")
+                        teleportPlayer(blueEyes.Position)
+                        task.wait(1)
+                    end
+                    
+                    -- تنفيذ الزر
+                    fireproximityprompt(prox)
+                    print("Raid Started")
+                    task.wait(raidDoneCD)
+                else
+                    print("Character or HumanoidRootPart not found, waiting...")
+                    task.wait(5)
+                end
+            end)
+            
+            if not success then
+                warn("Error in AutoRaids cycle: " .. tostring(error))
+                task.wait(5)
+            end
+        else
+            task.wait(1)
+        end
+    end
+end)
+
+print("AccRaid_BETA fully loaded in " .. (os.clock() - osclock) .. " seconds")
