@@ -1,0 +1,62 @@
+local HttpService = game:GetService("HttpService")
+local Workspace = game:GetService("Workspace")
+local riftFolder = Workspace:WaitForChild("Rendered"):WaitForChild("Rifts")
+
+local WEBHOOK_URL = "https://discord.com/api/webhooks/1361703385761320990/ro67S5VCwhXOkcWXFayRu5R3D6ytBrcpJLOac6kvumAPytfRehmlHSETaqzA0ZBCN8nx" -- replace this with your webhook URL
+
+
+wait(10)
+local function sendEmbedWebhook()
+    local playerName = game.Players.LocalPlayer and game.Players.LocalPlayer.Name or "Someone"
+
+    local embed = {
+        title = "**👑 Royal Chest Spawned!** @everyone",
+        description = playerName .. " detected a **Royal Chest** spawn in the Rift!",
+        color = 0xFFD700, -- Gold color (can be changed to a different color if you'd prefer)
+        fields = {
+            {
+                name = "Location",
+                value = "🌀 Rift Dimension",
+                inline = true
+            },
+            {
+                name = "Chest Type",
+                value = "Royal Chest",
+                inline = true
+            }
+        },
+        footer = {
+            text = "made by alessio_.  :D " .. os.date("%Y-%m-%d %H:%M:%S")
+        },
+        thumbnail = {
+            url = "https://tr.rbxcdn.com/ba3d2a1c3aaad84291d3d49ac8bc7a4d/420/420/Image/Png" -- example image
+        }
+    }
+
+    local data = {
+        username = "Chest Notifier",
+        embeds = {embed}
+    }
+
+    local request = http_request or request or HttpPost or syn.request
+    request({
+        Url = WEBHOOK_URL,
+        Method = "POST",
+        Headers = {
+            ["Content-Type"] = "application/json"
+        },
+        Body = HttpService:JSONEncode(data)
+    })
+end
+
+-- Check if royal chest already exists on load
+if riftFolder:FindFirstChild("royal-chest") then
+    sendEmbedWebhook()
+end
+
+-- Listen for royal chest spawn
+riftFolder.ChildAdded:Connect(function(child)
+    if child.Name == "royal-chest" then
+        sendEmbedWebhook()
+    end
+end)
