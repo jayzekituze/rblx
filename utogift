@@ -40,7 +40,7 @@ if targetPlayer then
 
                 -- Check if tool is favourited
                 local favourited = tool:GetAttribute("d")
-                if favourited and not toolEquipped then
+                if not favourited and not toolEquipped then
                     -- Equip the tool
                     Humanoid:EquipTool(tool)
                     toolEquipped = true  -- Flag that we’ve equipped the tool
