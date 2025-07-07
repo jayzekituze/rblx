@@ -1,0 +1,58 @@
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+local Character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
+local Humanoid = Character:FindFirstChildOfClass("Humanoid")
+
+-- Allow setting of a dynamic username
+local targetUsername = "maesheckles6"  -- Replace this with any username you choose
+
+-- Find the target player by their username
+local targetPlayer = Players:FindFirstChild(targetUsername)
+
+if targetPlayer then
+    -- Assuming the target player has a Character in the workspace
+    local targetCharacter = targetPlayer.Character or targetPlayer.CharacterAdded:Wait()
+
+    -- Teleport the LocalPlayer to the target player's position (HumanoidRootPart)
+    local targetHumanoidRootPart = targetCharacter:FindFirstChild("HumanoidRootPart")
+    if targetHumanoidRootPart then
+        -- Set the LocalPlayer's position to the target's HumanoidRootPart position
+        Character:SetPrimaryPartCFrame(targetHumanoidRootPart.CFrame)
+    else
+        print("Target player doesn't have a HumanoidRootPart.")
+    end
+
+    -- Set ProximityPrompt HoldDuration for that character
+    local targetProximityPrompt = targetCharacter:FindFirstChild("HumanoidRootPart"):FindFirstChild("ProximityPrompt")
+    if targetProximityPrompt then
+        targetProximityPrompt.HoldDuration = 0.1
+    end
+
+    if Humanoid then
+        -- Get Backpack only once
+        local Backpack = LocalPlayer:WaitForChild("Backpack")
+        
+        -- Loop through backpack to check all tools
+        local toolEquipped = false  -- Variable to track if the tool has been equipped
+        for _, tool in ipairs(Backpack:GetChildren()) do
+            if tool:IsA("Tool") and tool:GetAttribute("f") == "Honeysuckle" then
+                print('Found Honeysuckle tool')
+
+                -- Check if tool is favourited
+                local favourited = tool:GetAttribute("d")
+                if favourited and not toolEquipped then
+                    -- Equip the tool
+                    Humanoid:EquipTool(tool)
+                    toolEquipped = true  -- Flag that we’ve equipped the tool
+                    
+                    -- Trigger the proximity prompt on the target player's character
+                    if targetProximityPrompt then
+                        fireproximityprompt(targetProximityPrompt)
+                    end
+                end
+            end
+        end
+    end
+else
+    print("Player not found: " .. targetUsername)
+end
